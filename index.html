@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm and Countdown App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <button id="tab-alarm" class="active">Set Alarm</button>
+        <button id="tab-alarms-list">Alarms List</button>
+        <button id="tab-countdown">Countdown Timer</button>
+    </nav>
+    <div id="alarm" class="tab active">
+        <h2>Set Alarm</h2>
+        <label for="date">Date:</label>
+        <input type="date" id="date"><br>
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" min="0" max="23"><br>
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" min="0" max="59"><br>
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" min="0" max="59"><br>
+        <button id="set-alarm">Set Alarm</button>
+    </div>
+    <div id="alarms-list" class="tab">
+        <h2>Alarms List</h2>
+        <ul id="alarms-list"></ul>
+    </div>
+    <div id="countdown" class="tab">
+        <h2>Countdown Timer</h2>
+        <label for="countdown-hours">Hours:</label>
+        <input type="number" id="countdown-hours" min="0"><br>
+        <label for="countdown-minutes">Minutes:</label>
+        <input type="number" id="countdown-minutes" min="0"><br>
+        <label for="countdown-seconds">Seconds:</label>
+        <input type="number" id="countdown-seconds" min="0"><br>
+        <button id="start-countdown">Start Countdown</button>
+        <p id="countdown-display"></p>
+    </div>
+    <button id="stop-alarm">Stop Alarm Sound</button>
+    <script src="script.js"></script>
+</body>
+</html>
